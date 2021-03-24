@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GirarPantalla.MainPage">
+
+    <Grid>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2" x:Name="GrillaResutado" BackgroundColor="White">
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+            <Label x:Name="resultado" Text="0" FontSize="Header" Grid.Row="0"/>
+            </StackLayout>
+        </Grid>
+    
+        <Grid Grid.Row="1" Grid.Column="0" x:Name="PanelNumerico">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button BackgroundColor="#E6287A" Grid.Row="0" Grid.Column="0" Text="7" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#EE5D9B" Grid.Row="0" Grid.Column="1" Text="8" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#EE5D9B" Grid.Row="0" Grid.Column="2" Text="9" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#F87EB2" Grid.Row="1" Grid.Column="0" Text="4" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#B90E57" Grid.Row="1" Grid.Column="1" Text="5" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#B90E57" Grid.Row="1" Grid.Column="2" Text="6" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#CB3B78" Grid.Row="2" Grid.Column="0" Text="1" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#DE7FA7" Grid.Row="2" Grid.Column="1" Text="2" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#DE7FA7" Grid.Row="2" Grid.Column="2" Text="3" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#DE7FA7" Grid.Row="3" Grid.Column="0" Text="0" TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#DE7FA7" Grid.Row="3" Grid.Column="1" Text="." TextColor="White" FontSize="Large" Clicked="Valor_Seleccionado"/>
+            <Button BackgroundColor="#DE7FA7" Grid.Row="3" Grid.Column="2" Text="=" TextColor="White" FontSize="Large" Clicked="Calcular"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button BackgroundColor="#E6287A" Grid.Row="0" Grid.Column="0" Text="C" TextColor="White" FontSize="Large" Clicked="Borrado_Seleccionado"/>
+            <Button BackgroundColor="#EE5D9B" Grid.Row="1" Grid.Column="0" Text="÷" TextColor="White" FontSize="Large" Clicked="Operador_Seleccionado"/>
+            <Button BackgroundColor="#EE5D9B" Grid.Row="2" Grid.Column="0" Text="x" TextColor="White" FontSize="Large" Clicked="Operador_Seleccionado"/>
+            <Button BackgroundColor="#F87EB2" Grid.Row="3" Grid.Column="0" Text="-" TextColor="White" FontSize="Large" Clicked="Operador_Seleccionado"/>
+            <Button BackgroundColor="#B90E57" Grid.Row="4" Grid.Column="0" Text="+" TextColor="White" FontSize="Large" Clicked="Operador_Seleccionado"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
